@@ -33,8 +33,18 @@ h1, h2, h3, h4, h5, h6 {
 .boxes {
     border: 1px solid black;
     border-radius: 5px;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+}
+
+.innerbox-headline {
+    border-bottom: 1px solid black;
+}
+
+.innerbox-content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 button {
