@@ -33,3 +33,12 @@ This project is a single webpage, which provides recommendations and information
 - I want to have a recommendation on what I could cook and eat
 - If I don't like any of the recommendations given, I want to have a new recommendation
 - I want all of this in one place without needing to open 4 different apps
+
+
+BUGS:
+<div class="row">
+                <div class="text-center page-headline">
+                    <h1>My Daily Dashboard</h1>
+                </div>
+            </div>
+---> workaround to get headline centered (not possible with flexbox)
