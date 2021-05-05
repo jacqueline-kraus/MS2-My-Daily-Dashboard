@@ -24,6 +24,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-style {
     border-top: 1px solid black;
+    margin-top: 2rem;
+    background-color: #fff;
 }
 
 .boxes {
