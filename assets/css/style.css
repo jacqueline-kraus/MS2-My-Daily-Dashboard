@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-style {
     border-top: 1px solid black;
-    margin-top: 2rem;
     background-color: #fff;
 }
 
@@ -54,6 +53,14 @@ h1, h2, h3, h4, h5, h6 {
 .innerbox-button {
     border-top: 1px solid black;
     padding-top: 1rem;
+}
+
+.joke-container {
+    margin-top: 8rem;
+}
+
+.recipe-container {
+    margin-bottom: 4rem;
 }
 
 button {
