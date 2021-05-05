@@ -34,3 +34,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2rem;
     padding: 2rem;
 }
+
+button {
+    
+}
+
+.btn-info {
+    background-color: #063970;
+    border-color: #063970;
+    font-family: 'Roboto Mono', sans-serif;
+}
