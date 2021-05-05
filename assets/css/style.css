@@ -72,3 +72,9 @@ button {
     border-color: #063970;
     font-family: 'Roboto Mono', sans-serif;
 }
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #064770;
+    border-color: #064770;
+}
