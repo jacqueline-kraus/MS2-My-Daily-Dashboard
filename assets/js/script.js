@@ -1,0 +1,1 @@
+$('#buttonModal').modal('toggle');
