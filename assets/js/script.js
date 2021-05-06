@@ -1,1 +1,7 @@
-$('#buttonModal').modal('toggle');
+$(document).ready(function(){
+
+    $("#weatherButton").click(function(){
+        $("#weatherModal").modal("show");
+    });
+
+});
