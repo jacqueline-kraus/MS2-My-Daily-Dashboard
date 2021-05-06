@@ -8,4 +8,8 @@ $(document).ready(function(){
         $("#movieModal").modal("show");
     });
 
+    $("#recipeButton").click(function(){
+        $("#recipeModal").modal("show");
+    });
+
 });
