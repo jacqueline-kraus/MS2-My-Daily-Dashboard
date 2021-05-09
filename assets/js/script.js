@@ -1,5 +1,6 @@
 $(document).ready(function(){
     showMeal();
+    showJoke();
 });
 
 function showMeal() {
@@ -80,3 +81,23 @@ function renderMeal(mealObject) {
     mealImage.src = mealObject.strMealThumb;
 
 }
+
+//https://sv443.net/jokeapi/v2/
+function showJoke() {
+    fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
+      .then(response => response.json())
+      .then((jokeData) => {
+        if (jokeData.type === 'single') {
+            return jokeData.joke
+        } else {
+            return jokeData.setup + ' ' + jokeData.delivery;
+        }
+      })
+      .then(joke => renderJoke(joke));
+  }
+  
+function renderJoke(jokeData) {
+    let joke = document.getElementById('joke');
+    joke.innerHTML = jokeData;
+}
+  
