@@ -121,10 +121,17 @@ function getRandomNumber(max) {
   }
 
 function renderMovie(movieTrending) {
-    let movieContentElement = document.getElementById('movie-content');
+    let movieTitleElement = document.getElementById('movie-title');
+    let movieTitleModal = document.getElementById('movie-title-modal');
     let movieImageElement = document.getElementById('movie-image');
-    movieContentElement.innerHTML = movieTrending.title;
+    let movieDescriptionModal = document.getElementById('movie-description-modal');
+    let movieReleaseDateModal = document.getElementById('movie-release-date-modal');
+
+    movieTitleElement.innerHTML = movieTrending.title;
+    movieTitleModal.innerHTML = movieTrending.title;
     movieImageElement.src = 'https://image.tmdb.org/t/p/w185' + movieTrending.poster_path;
+    movieDescriptionModal.innerHTML = movieTrending.overview;
+    movieReleaseDateModal.innerHTML = movieTrending.release_date;
 }
 
   
