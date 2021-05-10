@@ -1,6 +1,7 @@
 $(document).ready(function(){
     showMeal();
     showJoke();
+    showMovie();
 });
 
 function showMeal() {
@@ -20,7 +21,6 @@ function showMeal() {
 }
 
 function renderMeal(mealObject) {
-    console.log(mealObject)
     // ingredients rendering
     let ingredients = [
         {ingredient: mealObject.strIngredient1, measure: mealObject.strMeasure1},
@@ -53,7 +53,7 @@ function renderMeal(mealObject) {
     // Add it to the page
     document.getElementById('mealIngredientsList').appendChild(listElement);
 
-    for (i = 0; i < ingredients.length; ++i) {
+    for (let i = 0; i < ingredients.length; ++i) {
         if (ingredients[i].ingredient !== "") {
         // create an item for each one
         let listItem = document.createElement('li');
@@ -96,8 +96,35 @@ function showJoke() {
       .then(joke => renderJoke(joke));
   }
   
-function renderJoke(jokeData) {
-    let joke = document.getElementById('joke');
-    joke.innerHTML = jokeData;
+function renderJoke(jokeContent) {
+    let jokeElement = document.getElementById('joke');
+    jokeElement.innerHTML = jokeContent;
 }
+
+// get movie
+
+function showMovie() {
+    fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=3c3923c788ee6ca56d320ff902df6f31')
+      .then(response => response.json())
+
+      .then(movieData => {
+        const randomNumber =  getRandomNumber(movieData.results.length);
+        const randomMovie = movieData.results[randomNumber];
+        
+        return randomMovie;
+      })
+      .then(randomMovieGenerated => renderMovie(randomMovieGenerated))
+}
+
+function getRandomNumber(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+function renderMovie(movieTrending) {
+    let movieContentElement = document.getElementById('movie-content');
+    let movieImageElement = document.getElementById('movie-image');
+    movieContentElement.innerHTML = movieTrending.title;
+    movieImageElement.src = 'https://image.tmdb.org/t/p/w185' + movieTrending.poster_path;
+}
+
   
