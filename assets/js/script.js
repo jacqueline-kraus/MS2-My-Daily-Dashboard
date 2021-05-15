@@ -2,6 +2,8 @@ $(document).ready(function(){
     showMeal();
     showJoke();
     showMovie();
+    getCity();
+    //showWeather();
 });
 
 function showMeal() {
@@ -106,7 +108,6 @@ function renderJoke(jokeContent) {
 function showMovie() {
     fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=3c3923c788ee6ca56d320ff902df6f31')
       .then(response => response.json())
-
       .then(movieData => {
         const randomNumber =  getRandomNumber(movieData.results.length);
         const randomMovie = movieData.results[randomNumber];
@@ -132,6 +133,35 @@ function renderMovie(movieTrending) {
     movieImageElement.src = 'https://image.tmdb.org/t/p/w185' + movieTrending.poster_path;
     movieDescriptionModal.innerHTML = movieTrending.overview;
     movieReleaseDateModal.innerHTML = movieTrending.release_date;
+}
+// Fetch weather API and show weather on website:
+
+// Get City, by default city is detected by geolocation
+function getCity() {
+    fetch('https://geolocation-db.com/json/')
+      .then(response => response.json())
+      .then(cityData => showWeather(cityData.city))
+}
+
+// Fetch weather data
+function showWeather(city) {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=e58f5d3306895d50f6392ff5f57595de&units=metric')
+    .then(response => response.json())
+    .then(weatherData => renderWeather(weatherData))
+}
+
+// Render weather to show in index.html
+function renderWeather(weatherReport) {
+    let weatherIconElement = document.getElementById('weather-icon')
+    let weatherMainElement = document.getElementById('weather-main')
+    let weatherSysElement = document.getElementById('weather-sys')
+
+    weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
+    weatherMainElement.innerHTML = weatherReport.main;
+    weatherSysElement.innerHTML = weatherReport.sys;
+
+
+
 }
 
   
