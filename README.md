@@ -1,5 +1,34 @@
+
 # MS2-My-Daily-Dashboard
+
+Code Institute - Interactive Frontend Development Milestone Project.
+
 This project is a single webpage, which provides recommendations and information on a daily basis.
+
+
+
+## [Live website in github pages](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/)
+--- 
+# Table of contents
+- [UX](#ux)
+    - [Website owner business goals](#website-owner-business-goals)
+    - [User goals](#user-goals)
+    - [User stories](#user-stories)
+    - [Structure of the website](#structure-of-the-website)
+    - [Wireframes](#wireframes)
+    - [Surface](#surface)
+- [Features](#features)
+    - [Existing features](#existing-features)
+    - [Features left to implement](#features-left-to-implement)
+- [Technologies used](#technologies-used)
+- [Code Validation](#code-validation)
+- [Testing](#testing)
+    - [Funcionality Testing](#functionality-testing)
+    - [Compatibility Testing](#compatibility-testing)
+    - [User stories testing](#user-stories-testing)
+    - [Bugs and problems](#bugs-and-problems)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 
 #  UX 
@@ -34,11 +63,3 @@ This project is a single webpage, which provides recommendations and information
 - If I don't like any of the recommendations given, I want to have a new recommendation
 - I want all of this in one place without needing to open 4 different apps
 
-
-BUGS:
-<div class="row">
-                <div class="text-center page-headline">
-                    <h1>My Daily Dashboard</h1>
-                </div>
-            </div>
----> workaround to get headline centered (not possible with flexbox)
