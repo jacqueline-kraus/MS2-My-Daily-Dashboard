@@ -94,13 +94,13 @@ button {
 }
 
 .btn-info {
-    background-color: #063970;
-    border-color: #063970;
+    background-color: #ea632b;
+    border-color: #ea632b;
     font-family: 'Roboto Mono', sans-serif;
 }
 
 .btn-info:hover {
     color: #fff;
-    background-color: #064770;
-    border-color: #064770;
+    background-color: #ea632b;
+    border-color: #ea632b;
 }
