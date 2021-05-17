@@ -131,8 +131,8 @@ function renderMovie(movieTrending) {
     movieTitleElement.innerHTML = movieTrending.title;
     movieTitleModal.innerHTML = movieTrending.title;
     movieImageElement.src = 'https://image.tmdb.org/t/p/w185' + movieTrending.poster_path;
-    movieDescriptionModal.innerHTML = movieTrending.overview;
-    movieReleaseDateModal.innerHTML = movieTrending.release_date;
+    movieDescriptionModal.innerHTML = `<b>Short description:</b><br> ${movieTrending.overview}`;
+    movieReleaseDateModal.innerHTML = `<b>Release Date:</b><br> ${movieTrending.release_date}`;
 }
 // Fetch weather API and show weather on website:
 
