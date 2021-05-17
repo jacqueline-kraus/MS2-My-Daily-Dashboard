@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
 }
 
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
 .header-style {
     border-bottom: 2px solid black;
     background-color: #ea632b;
