@@ -170,13 +170,32 @@ changeLocationButton.addEventListener('click', changeCity);
 
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
-    let weatherIconElement = document.getElementById('weather-icon')
-    let weatherMainElement = document.getElementById('weather-main')
-    let weatherSysElement = document.getElementById('weather-sys')
+    let weatherIconElement = document.getElementById('weather-icon');
+    let weatherMainTempElement = document.getElementById('weather-main-temp');
+    let weatherMainMaxTempElement = document.getElementById('weather-main-max-temp');
+    let weatherMainMinTempElement = document.getElementById('weather-main-min-temp');
+    let weatherMainFeelTempElement = document.getElementById('weather-main-feel');
+
+    // https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript
+    var secSunrise = weatherReport.sys.sunrise;
+    var dateSunrise = new Date(secSunrise * 1000);
+    var timestrSunrise = dateSunrise.toLocaleTimeString();
+
+    var secSunset = weatherReport.sys.sunset;
+    var dateSunset = new Date(secSunset * 1000);
+    var timestrSunset = dateSunset.toLocaleTimeString();
+
+    let weatherSysSunriseElement = document.getElementById('weather-sys-sunrise');
+    let weatherSysSunsetElement = document.getElementById('weather-sys-sunset');
+
 
     weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
-    weatherMainElement.innerHTML = weatherReport.main.temp;
-    weatherSysElement.innerHTML = weatherReport.sys;
+    weatherMainTempElement.innerHTML = 'Temperature: ' + weatherReport.main.temp + '° Celsius';
+    weatherMainMaxTempElement.innerHTML = 'Max. Temperature: ' + weatherReport.main.temp_max + '° Celsius';
+    weatherMainMinTempElement.innerHTML = 'Min. Temperature: ' + weatherReport.main.temp_min + '° Celsius';
+    weatherMainFeelTempElement.innerHTML = 'Feels Like: ' + weatherReport.main.feels_like + '° Celsius';
+    weatherSysSunriseElement.innerHTML = 'Sunrise: ' + timestrSunrise + ' am';
+    weatherSysSunsetElement.innerHTML = 'Sunset: ' + timestrSunset + ' pm';
 
 
 
