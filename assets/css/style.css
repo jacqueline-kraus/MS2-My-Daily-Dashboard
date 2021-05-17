@@ -3,6 +3,9 @@
 body {
     font-family: 'Lato', sans-serif;
     background-color: #7faddb;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
 }
 
 section {
@@ -42,7 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 .boxes {
     border: 1px solid black;
     border-radius: 5px;
-    margin: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     padding: 1rem;
     width: auto;
     background-color: #fff;
@@ -55,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 .innerbox-content {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.two-boxes-row-height {
+    height: 300px;
 }
 
 .innerbox-button {
