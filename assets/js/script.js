@@ -150,6 +150,24 @@ function showWeather(city) {
     .then(weatherData => renderWeather(weatherData))
 }
 
+// change location on weather modal
+function changeCity() {
+    let inputValue = document.getElementById('new-location').value;
+    //alert(inputValue);
+    showWeather(inputValue);
+
+}
+let changeLocationButton = document.getElementById('submit-change-location');
+changeLocationButton.addEventListener('click', changeCity);
+
+
+// $( "#submit-change-location" ).click(function() {
+//     $( "#new-location" ).change(function() {
+//         alert('You changed your location');
+//     });
+//   });
+
+
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
     let weatherIconElement = document.getElementById('weather-icon')
@@ -157,7 +175,7 @@ function renderWeather(weatherReport) {
     let weatherSysElement = document.getElementById('weather-sys')
 
     weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
-    weatherMainElement.innerHTML = weatherReport.main;
+    weatherMainElement.innerHTML = weatherReport.main.temp;
     weatherSysElement.innerHTML = weatherReport.sys;
 
 
