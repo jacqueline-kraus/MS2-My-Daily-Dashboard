@@ -55,8 +55,12 @@
                         <div class="col innerbox-content">
                             <div>
                             <img src="" href="" title="" target="_blank" id="weather-icon"></img>
-                            <div id="weather-main"></div>
-                            <div id="weather-sys"></div>
+                            <div id="weather-main-temp"></div>
+                            <div id="weather-main-max-temp"></div>
+                            <div id="weather-main-min-temp"></div>
+                            <div id="weather-main-feel"></div>
+                            <div id="weather-sys-sunrise"></div>
+                            <div id="weather-sys-sunset"></div>
                             </div>
                         </div>
                     </div>
@@ -79,7 +83,7 @@
                                                         <div id="type-location" class="form-group">
                                                         <label for="new-location" class="col-form-label">Type your new Location:</label>
                                                         <input type="text" class="form-control" id="new-location">
-                                                        <button id="submit-change-location" class="btn btn-primary" type="submit">Save changes</button>
+                                                        <button id="submit-change-location" class="btn btn-primary" type="button" data-dismiss="modal">Save changes</button>
                                                         </div>
                                                 </form>
                                             </div>
