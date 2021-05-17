@@ -140,7 +140,13 @@ function renderMovie(movieTrending) {
 function getCity() {
     fetch('https://geolocation-db.com/json/')
       .then(response => response.json())
-      .then(cityData => showWeather(cityData.city))
+      .then(cityData => {
+        if (cityData.city == false) {
+            return alert('Sorry, we could not detect your location. Please type manually.')
+        } else {
+            return showWeather(cityData.city);
+        }
+      })
 }
 
 // Fetch weather data
@@ -159,13 +165,6 @@ function changeCity() {
 }
 let changeLocationButton = document.getElementById('submit-change-location');
 changeLocationButton.addEventListener('click', changeCity);
-
-
-// $( "#submit-change-location" ).click(function() {
-//     $( "#new-location" ).change(function() {
-//         alert('You changed your location');
-//     });
-//   });
 
 
 // Render weather to show in index.html
