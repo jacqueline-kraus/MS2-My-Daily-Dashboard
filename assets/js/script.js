@@ -188,14 +188,14 @@ function renderWeather(weatherReport) {
     let weatherSysSunriseElement = document.getElementById('weather-sys-sunrise');
     let weatherSysSunsetElement = document.getElementById('weather-sys-sunset');
 
-    locationName.innerHTML = 'Location: ' + weatherReport.name + ', ' + weatherReport.sys.country;
+    locationName.innerHTML = `<b>Location:</b> ${weatherReport.name}, ${weatherReport.sys.country}`;
     weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
-    weatherMainTempElement.innerHTML = 'Temperature: ' + weatherReport.main.temp + '° Celsius';
+    weatherMainTempElement.innerHTML = `<i class="fas fa-temperature-high"></i> <b>Temperature:</b> ${weatherReport.main.temp} °C`;
     weatherMainMaxTempElement.innerHTML = 'Max. Temperature: ' + weatherReport.main.temp_max + '° Celsius';
     weatherMainMinTempElement.innerHTML = 'Min. Temperature: ' + weatherReport.main.temp_min + '° Celsius';
-    weatherMainFeelTempElement.innerHTML = 'Feels Like: ' + weatherReport.main.feels_like + '° Celsius';
-    weatherSysSunriseElement.innerHTML = 'Sunrise: ' + timestrSunrise + ' am';
-    weatherSysSunsetElement.innerHTML = 'Sunset: ' + timestrSunset + ' pm';
+    weatherMainFeelTempElement.innerHTML = `<b>Feels Like:</b> ${weatherReport.main.feels_like} °C`;
+    weatherSysSunriseElement.innerHTML = `<i class="fas fa-angle-up"></i> <b>Sunrise:</b> ${timestrSunrise} am`;
+    weatherSysSunsetElement.innerHTML = `<i class="fas fa-angle-down"></i> <b>Sunset:</b> ${timestrSunset} pm`;
 
 
 
