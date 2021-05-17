@@ -170,6 +170,7 @@ changeLocationButton.addEventListener('click', changeCity);
 
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
+    let locationName = document.getElementById('location-name');
     let weatherIconElement = document.getElementById('weather-icon');
     let weatherMainTempElement = document.getElementById('weather-main-temp');
     let weatherMainMaxTempElement = document.getElementById('weather-main-max-temp');
@@ -188,7 +189,7 @@ function renderWeather(weatherReport) {
     let weatherSysSunriseElement = document.getElementById('weather-sys-sunrise');
     let weatherSysSunsetElement = document.getElementById('weather-sys-sunset');
 
-
+    locationName.innerHTML = 'Location: ' + weatherReport.name + ', ' + weatherReport.sys.country;
     weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
     weatherMainTempElement.innerHTML = 'Temperature: ' + weatherReport.main.temp + '° Celsius';
     weatherMainMaxTempElement.innerHTML = 'Max. Temperature: ' + weatherReport.main.temp_max + '° Celsius';
