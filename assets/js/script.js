@@ -179,7 +179,7 @@ changeLocationButton.addEventListener('click', changeCity);
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
     document.getElementById('new-location').value = '';
-    if(weatherReport.cod === '404') {
+    if(parseInt(weatherReport.cod) >= 400) {
         document.getElementById('city-alert').classList.remove('d-none');
         setTimeout(function(){ 
            $('#weatherModal').modal('show'); 
