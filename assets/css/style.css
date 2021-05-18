@@ -121,6 +121,23 @@ img {
     border-color: #ea632b;
 }
 
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: #ea632b;
+    border-color: #ea632b;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show>.btn-info.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.btn-info.focus, .btn-info:focus {
+    color: #fff;
+    background-color: #ea632b;
+    border-color: #ea632b;
+    box-shadow: none;
+}
+
 .refresh-button {
     border: 2px solid black;
     border-radius: 50%;
