@@ -178,6 +178,11 @@ changeLocationButton.addEventListener('click', changeCity);
 
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
+    if(weatherReport.cod === '404') {
+        alert('This city does not exist');
+        return;
+    }
+
     let locationName = document.getElementById('location-name');
     let weatherIconElement = document.getElementById('weather-icon');
     let weatherMainTempElement = document.getElementById('weather-main-temp');
@@ -199,12 +204,12 @@ function renderWeather(weatherReport) {
 
     locationName.innerHTML = `<b>Location:</b> ${weatherReport.name}, ${weatherReport.sys.country}`;
     weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
-    weatherMainTempElement.innerHTML = `<i class="fas fa-temperature-high"></i> <b>Temperature:</b> ${weatherReport.main.temp} °C`;
-    weatherMainMaxTempElement.innerHTML = 'Max. Temperature: ' + weatherReport.main.temp_max + '° Celsius';
-    weatherMainMinTempElement.innerHTML = 'Min. Temperature: ' + weatherReport.main.temp_min + '° Celsius';
-    weatherMainFeelTempElement.innerHTML = `<b>Feels Like:</b> ${weatherReport.main.feels_like} °C`;
-    weatherSysSunriseElement.innerHTML = `<i class="fas fa-angle-up"></i> <b>Sunrise:</b> ${timestrSunrise} am`;
-    weatherSysSunsetElement.innerHTML = `<i class="fas fa-angle-down"></i> <b>Sunset:</b> ${timestrSunset} pm`;
+    weatherMainTempElement.innerHTML = `<i class="fas fa-temperature-high"></i> <b>Temperature:</b> ${parseInt(weatherReport.main.temp)} °C`;
+    weatherMainMaxTempElement.innerHTML = 'Max. Temperature: ' + parseInt(weatherReport.main.temp_max) + '°C';
+    weatherMainMinTempElement.innerHTML = 'Min. Temperature: ' + parseInt(weatherReport.main.temp_min) + '°C';
+    weatherMainFeelTempElement.innerHTML = `<b>Feels Like:</b> ${parseInt(weatherReport.main.feels_like)} °C`;
+    weatherSysSunriseElement.innerHTML = `<i class="far fa-sun"></i> <b>Sunrise:</b> ${timestrSunrise}`;
+    weatherSysSunsetElement.innerHTML = `<i class="far fa-moon"></i> <b>Sunset:</b> ${timestrSunset}`;
 
 
 
