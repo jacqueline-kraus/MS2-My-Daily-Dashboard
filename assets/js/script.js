@@ -178,10 +178,16 @@ changeLocationButton.addEventListener('click', changeCity);
 
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
+    document.getElementById('new-location').value = '';
     if(weatherReport.cod === '404') {
-        alert('This city does not exist');
+        document.getElementById('city-alert').classList.remove('d-none');
+        setTimeout(function(){ 
+           $('#weatherModal').modal('show'); 
+        }, 1000);
         return;
     }
+
+    document.getElementById('city-alert').classList.add('d-none');
 
     let locationName = document.getElementById('location-name');
     let weatherIconElement = document.getElementById('weather-icon');
