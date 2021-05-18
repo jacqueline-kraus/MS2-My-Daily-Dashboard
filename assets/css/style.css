@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #joke {
     text-align: justify;
-    padding-right: 10rem;
-    padding-left: 10rem;
+    padding-right: 300px;
+    padding-left: 300px;
 }
 
 .recipe-container {
@@ -101,16 +101,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
 }
 
-#movie-image {
+img {
     border-radius: 5px;
 }
 
 .movie-modal-style {
     text-align: left;
-}
-
-button {
-    
 }
 
 .btn-info {
@@ -130,6 +126,7 @@ button {
     border-radius: 50%;
     padding: 0.5rem;
     background-color: #7faddb;
+    cursor: pointer;
 }
 
 #meal-title {
