@@ -1,11 +1,18 @@
 // jshint esversion:6
 
+setInterval(function(){
+    showMeal();
+    showJoke();
+    showMovie();
+    getCity();
+}, 86400000);
+
+
 $(document).ready(function(){
     showMeal();
     showJoke();
     showMovie();
     getCity();
-    //showWeather();
 });
 
 function showMeal() {
