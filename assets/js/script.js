@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 $(document).ready(function(){
     showMeal();
     showJoke();
@@ -7,7 +9,7 @@ $(document).ready(function(){
 });
 
 function showMeal() {
-    let randomMeal = fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         // .then(response => {
         //     response.json().then(jsonObject => {   
         //         const arrayIngredients = [
@@ -19,7 +21,7 @@ function showMeal() {
         //     });
         // })
         .then(response => response.json())
-        .then(jsonObject => renderMeal(jsonObject.meals[0]))
+        .then(jsonObject => renderMeal(jsonObject.meals[0]));
 }
 
 function renderMeal(mealObject) {
@@ -66,7 +68,7 @@ function renderMeal(mealObject) {
         // Add listItem to the listElement
         listElement.appendChild(listItem);
         }
-    };
+    }
     // set meal title
     let mealTitle = document.getElementById('meal-title');
     let modalMealTitle = document.getElementById('modal-meal-title');
@@ -90,7 +92,7 @@ function showJoke() {
       .then(response => response.json())
       .then((jokeData) => {
         if (jokeData.type === 'single') {
-            return jokeData.joke
+            return jokeData.joke;
         } else {
             return jokeData.setup + ' ' + jokeData.delivery;
         }
@@ -114,7 +116,7 @@ function showMovie() {
         
         return randomMovie;
       })
-      .then(randomMovieGenerated => renderMovie(randomMovieGenerated))
+      .then(randomMovieGenerated => renderMovie(randomMovieGenerated));
 }
 
 function getRandomNumber(max) {
@@ -142,18 +144,18 @@ function getCity() {
       .then(response => response.json())
       .then(cityData => {
         if (cityData.city == false) {
-            return alert('Sorry, we could not detect your location. Please type manually.')
+            return alert('Sorry, we could not detect your location. Please type manually.');
         } else {
             return showWeather(cityData.city);
         }
-      })
+      });
 }
 
 // Fetch weather data
 function showWeather(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=e58f5d3306895d50f6392ff5f57595de&units=metric')
     .then(response => response.json())
-    .then(weatherData => renderWeather(weatherData))
+    .then(weatherData => renderWeather(weatherData));
 }
 
 // change location on weather modal
