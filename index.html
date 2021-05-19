@@ -10,13 +10,42 @@
     <title>My Daily Dashboard</title>
 </head>
 <body>
+    <!-- FAQ Modal (has to be outside the HEADER tag)-->
+    <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">FAQ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <h6>What if I don't like what I see?</h6>
+                <p>Just hit refresh and you get a new joke, movie or meal recommendation. As we unfortunately cannot change the weather, if we do not like it, this does not work for the weather report <i class="far fa-smile-wink"></i>.</p>
+                <br>
+                <h6>How can I change my location to see the weather accordingly?</h6>
+                <p>Just click on "change location", type your new location and click the submit button.</p>
+                <br>
+                <h6>Note:</h6>
+                <p>If you keep the "My Daily Dashboard" page open in your browser, it will refresh every 24hours automatically.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <header>
         <div class="container-fluid header-style fixed-top">
             <div class="row text-right">
                 <!-- FAQ -->
                 <div class="col faq-box">
-                    <i class="far fa-question-circle"></i>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-toggle="modal" data-target="#faqModal">
+                        <i class="far fa-question-circle"></i>
+                    </button>
                 </div>
             </div>
             <div class="row">
