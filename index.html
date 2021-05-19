@@ -10,12 +10,12 @@
     <title>My Daily Dashboard</title>
 </head>
 <body>
-    <!-- FAQ Modal (has to be outside the HEADER tag)-->
-    <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- FAQ Modal (has to have the body tag as a root to keep all stylings)-->
+    <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Frequently Asked Questions</h5>
+                    <h5 class="modal-title" id="faqModalLabel">Frequently Asked Questions</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -42,7 +42,7 @@
             <div class="row text-right">
                 <!-- FAQ -->
                 <div class="col faq-box">
-                    <!-- Button trigger modal -->
+                    <!-- Button to trigger FAQ modal -->
                     <button type="button" class="btn" data-toggle="modal" data-target="#faqModal">
                         <i class="far fa-question-circle"></i>
                     </button>
@@ -56,9 +56,9 @@
             </div>
         </div>
     </header>
-    <!-- SECTION WITH WIDGETS -->
+    <!-- SECTION WITH DIFFERENT BLOCKS -->
     <section>
-        <!-- JOKE WIDGET-->
+        <!-- Joke Block -->
         <div class="container boxes joke-container">
             <div class="row">
                 <!-- Joke Headline -->
@@ -73,17 +73,19 @@
                 </div>
             </div>
         </div>
-        <!-- WEATHER & MOVIE WIDGET-->
+        <!-- WEATHER & MOVIE BLOCKS-->
         <div class="container">
             <div class="row">
-                <!-- WEATHER -->
+                <!-- Weather Block -->
                 <div class="col boxes mr-md-5">
                     <div class="row">
                         <div class="col innerbox-headline">
+                            <!-- Weather Headline -->
                             <h3 class="text-center weather-headline">Weather today</h3>
                         </div>
                     </div>
                     <div class="row">
+                        <!-- Weather Content -->
                         <div class="col innerbox-content two-boxes-row-height">
                             <div>
                                 <div id="location-name"></div>
@@ -101,13 +103,14 @@
                     </div>
                     <div class="row">
                         <div class="col text-center innerbox-button">
+                            <!-- Button to trigger Weather modal-->
                             <button type="button" class="btn btn-info" id="weatherButton" data-toggle="modal" data-target="#weatherModal">Change Location</button>
                             <!-- Weather Modal -->
-                            <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">CHANGE LOCATION</h5>
+                                            <h5 class="modal-title" id="weatherModalLabel">CHANGE LOCATION</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -115,14 +118,14 @@
                                         <div class="modal-body">
                                             <div>
                                                 <form>
-                                                        <div class="alert alert-danger d-none" id="city-alert" role="alert">The city you entered was not found</div>
-                                                        <div id="type-location" class="form-group">
-                                                            <label for="new-location" class="col-form-label font-lato">Please type your new location:</label>
-                                                            <br>
-                                                            <input type="text" class="form-control" id="new-location">
-                                                            <br>
-                                                            <button id="submit-change-location" class="btn btn-info" type="button" data-dismiss="modal">Save changes</button>
-                                                        </div>
+                                                    <div class="alert alert-danger d-none" id="city-alert" role="alert">The city you entered was not found</div>
+                                                    <div id="type-location" class="form-group">
+                                                        <label for="new-location" class="col-form-label font-lato">Please type your new location:</label>
+                                                        <br>
+                                                        <input type="text" class="form-control" id="new-location">
+                                                        <br>
+                                                        <button id="submit-change-location" class="btn btn-info" type="button" data-dismiss="modal">Save changes</button>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
@@ -132,14 +135,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- MOVIE -->
+                <!-- Movie Block-->
                 <div class="col boxes">
                     <div class="row">
                         <div class="col innerbox-headline">
+                            <!-- Movie Headline -->
                             <h3 class="text-center">Movie today <i class="fas fa-redo refresh-button" onclick="showMovie()"></i></h3>
                         </div>
                     </div>
                     <div class="row">
+                        <!-- Movie Content -->
                         <div class="col innerbox-content two-boxes-row-height">
                             <p id='movie-title'></p>
                             <img src="" id="movie-image" alt="movie of the day">
@@ -147,9 +152,10 @@
                     </div>
                     <div class="row">
                         <div class="col text-center innerbox-button">
+                            <!-- Button to trigger movie modal -->
                             <button class="btn btn-info" id="movieButton" data-toggle="modal" data-target="#movieModal">See Information</button>
                             <!-- Movie Modal -->
-                            <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -173,15 +179,17 @@
                 </div>
             </div>
         </div>
-        <!-- RECIPE WIDGET-->
-        <div class="container boxes recipe-container">
+        <!-- Meal Block -->
+        <div class="container boxes meal-container">
             <div class="col">
                 <div class="row">
                     <div class="col innerbox-headline">
-                        <h3 class="text-center meal-headline">Recipe of the day <i class="fas fa-redo refresh-button" onclick="showMeal()"></i></h3>
+                        <!-- Meal headline -->
+                        <h3 class="text-center meal-headline">Meal of the day <i class="fas fa-redo refresh-button" onclick="showMeal()"></i></h3>
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Meal Content -->
                     <div class="col innerbox-content">
                         <p class="text-center" id="meal-title"></p>
                         <img src="" id="meal-image" title="meal of the day" class="img-fluid">
@@ -189,13 +197,14 @@
                 </div>
                 <div class="row">
                     <div class="col text-center innerbox-button">
-                        <button class="btn btn-info" id="recipeButton" data-toggle="modal" data-target="#recipeModal">Check Details</button>
-                        <!-- Recipe Modal -->
-                        <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <!-- Button to trigger meal modal -->
+                        <button class="btn btn-info" id="mealButton" data-toggle="modal" data-target="#mealModal">Check Details</button>
+                        <!-- Meal Modal -->
+                        <div class="modal fade" id="mealModal" tabindex="-1" role="dialog" aria-labelledby="mealModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="modal-meal-title">RECIPE TITLE</h5>
+                                        <h5 class="modal-title" id="modal-meal-title">MEAL TITLE</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
