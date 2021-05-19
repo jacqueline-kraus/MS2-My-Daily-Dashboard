@@ -1,4 +1,8 @@
+/* Google Fonts */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700');
+
+/* General Styles */
 
 body {
     font-family: 'Lato', sans-serif;
@@ -26,6 +30,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
 }
 
+
+img {
+    border-radius: 5px;
+}
+
+.modal-body {
+    text-align: left;
+}
+
+/* Header and Footer */
+
 .header-style {
     border-bottom: 2px solid black;
     background-color: #ea632b;
@@ -52,6 +67,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
+/* Boxes with main content */
 
 .boxes {
     border: 2px solid black;
@@ -81,6 +98,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1rem;
 }
 
+/* Joke block */
+
 .joke-container {
     margin-top: 8rem;
 }
@@ -91,9 +110,13 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 300px;
 }
 
-.meal-container {
-    margin-bottom: 4rem;
+/* Weather block */
+
+.weather-headline {
+    margin-bottom: 1.5rem;
 }
+
+/* Movie block */
 
 #movie-title {
     text-transform: uppercase;
@@ -101,13 +124,23 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
 }
 
-img {
-    border-radius: 5px;
-}
-
 .movie-modal-style {
     text-align: left;
 }
+
+/* Meal block */
+
+.meal-container {
+    margin-bottom: 4rem;
+}
+
+#meal-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* Bootstrap button customisation */
 
 .btn-info {
     background-color: #ea632b;
@@ -143,6 +176,8 @@ img {
     box-shadow: none;
 }
 
+/* Refresh Button */
+
 .refresh-button {
     border: 2px solid black;
     border-radius: 50%;
@@ -151,19 +186,7 @@ img {
     cursor: pointer;
 }
 
-#meal-title {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 20px;
-}
-
-.weather-headline {
-    margin-bottom: 1.5rem;
-}
-
-.modal-body {
-    text-align: left;
-}
+/* Only for screensize < 600px */
 
 @media only screen and (max-width: 600px) {
 .meal-headline {
@@ -174,5 +197,4 @@ img {
     text-align: justify;
     padding: 0;
 }
-
 }
