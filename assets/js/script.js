@@ -15,22 +15,14 @@ $(document).ready(function(){
     getCity();
 });
 
+// Fetch meal data from API (https://www.themealdb.com)
 function showMeal() {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-        // .then(response => {
-        //     response.json().then(jsonObject => {   
-        //         const arrayIngredients = [
-        //             jsonObject.meals[0].strIngredient1,
-        //             jsonObject.meals[0].strIngredient2,
-        //             jsonObject.meals[0].strIngredient3,
-        //         ];
-        //         createIngredientsList(arrayIngredients);
-        //     });
-        // })
         .then(response => response.json())
         .then(jsonObject => renderMeal(jsonObject.meals[0]));
 }
 
+// Rendering meal data to be filled in html
 function renderMeal(mealObject) {
     // ingredients rendering
     let ingredients = [
@@ -54,10 +46,9 @@ function renderMeal(mealObject) {
         {ingredient: mealObject.strIngredient18, measure: mealObject.strMeasure18},
         {ingredient: mealObject.strIngredient19, measure: mealObject.strMeasure19},
         {ingredient: mealObject.strIngredient20, measure: mealObject.strMeasure20},
-
     ];
 
-    // https://getbutterfly.com/generate-html-list-from-javascript-array/
+    // Copied code from: https://getbutterfly.com/generate-html-list-from-javascript-array/ and adjusted for this projects needs:
     // Make the list
     let listElement = document.createElement('ul');
 
@@ -76,27 +67,31 @@ function renderMeal(mealObject) {
         listElement.appendChild(listItem);
         }
     }
+
     // set meal title
     let mealTitle = document.getElementById('meal-title');
     let modalMealTitle = document.getElementById('modal-meal-title');
+
     mealTitle.innerHTML = mealObject.strMeal;
     modalMealTitle.innerHTML = mealObject.strMeal;
 
-    //set preparation text
+    // set preparation text
     let mealPreparation = document.getElementById('meal-preparation');
-    //https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements --> break for new lines
+
+    // used: https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements --> break for new lines
     mealPreparation.innerHTML = mealObject.strInstructions.replace(/(?:\r\n|\r|\n)/g, '<br>');
 
-    //set meal image
+    // set meal image
     let mealImage = document.getElementById('meal-image');
     mealImage.src = mealObject.strMealThumb;
 
 }
 
-//https://sv443.net/jokeapi/v2/
+// Fetch Joke data from https://sv443.net/jokeapi/v2/
 function showJoke() {
     fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
       .then(response => response.json())
+      // 2 types of jokes: single or two part
       .then((jokeData) => {
         if (jokeData.type === 'single') {
             return jokeData.joke;
@@ -106,14 +101,14 @@ function showJoke() {
       })
       .then(joke => renderJoke(joke));
   }
-  
+
+// render joke content for index.html
 function renderJoke(jokeContent) {
     let jokeElement = document.getElementById('joke');
     jokeElement.innerHTML = jokeContent;
 }
 
-// get movie
-
+// Fetch movie data (https://api.themoviedb.org)
 function showMovie() {
     fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=3c3923c788ee6ca56d320ff902df6f31')
       .then(response => response.json())
@@ -126,10 +121,12 @@ function showMovie() {
       .then(randomMovieGenerated => renderMovie(randomMovieGenerated));
 }
 
+// function to get a random number to get then a random movie
 function getRandomNumber(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 
+// render movie data for index.html
 function renderMovie(movieTrending) {
     let movieTitleElement = document.getElementById('movie-title');
     let movieTitleModal = document.getElementById('movie-title-modal');
@@ -143,9 +140,11 @@ function renderMovie(movieTrending) {
     movieDescriptionModal.innerHTML = `<b>Short description:</b><br> ${movieTrending.overview}`;
     movieReleaseDateModal.innerHTML = `<b>Release Date:</b><br> ${movieTrending.release_date}`;
 }
+
+
 // Fetch weather API and show weather on website:
 
-// Get City, by default city is detected by geolocation
+// Get City, by default city is detected by geolocation through API (https://geolocation-db.com/json/)
 function getCity() {
     fetch('https://geolocation-db.com/json/')
       .then(response => response.json())
@@ -158,7 +157,7 @@ function getCity() {
       });
 }
 
-// Fetch weather data
+// Fetch weather data from Openweathermap API (https://api.openweathermap.org)
 function showWeather(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=e58f5d3306895d50f6392ff5f57595de&units=metric')
     .then(response => response.json())
@@ -168,10 +167,10 @@ function showWeather(city) {
 // change location on weather modal
 function changeCity() {
     let inputValue = document.getElementById('new-location').value;
-    //alert(inputValue);
     showWeather(inputValue);
 
 }
+
 let changeLocationButton = document.getElementById('submit-change-location');
 changeLocationButton.addEventListener('click', changeCity);
 
@@ -196,7 +195,7 @@ function renderWeather(weatherReport) {
     let weatherMainMinTempElement = document.getElementById('weather-main-min-temp');
     let weatherMainFeelTempElement = document.getElementById('weather-main-feel');
 
-    // https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript
+    // to convert sunrise/sunset data in local time: https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript
     var secSunrise = weatherReport.sys.sunrise;
     var dateSunrise = new Date(secSunrise * 1000);
     var timestrSunrise = dateSunrise.toLocaleTimeString();
@@ -216,9 +215,6 @@ function renderWeather(weatherReport) {
     weatherMainFeelTempElement.innerHTML = `<b>Feels Like:</b> ${parseInt(weatherReport.main.feels_like)} °C`;
     weatherSysSunriseElement.innerHTML = `<i class="far fa-sun"></i> <b>Sunrise:</b> ${timestrSunrise}`;
     weatherSysSunsetElement.innerHTML = `<i class="far fa-moon"></i> <b>Sunset:</b> ${timestrSunset}`;
-
-
-
 }
 
   
