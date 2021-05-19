@@ -128,13 +128,18 @@ img {
 }
 
 .btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show>.btn-info.dropdown-toggle:focus {
-    box-shadow: none;
+    box-shadow: 0 0 0 0.2rem rgb(255 89 19 / 25%);
 }
 
 .btn-info.focus, .btn-info:focus {
     color: #fff;
     background-color: #ea632b;
     border-color: #ea632b;
+    box-shadow: 0 0 0 0.2rem rgb(255 89 19 / 25%);
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
     box-shadow: none;
 }
 
@@ -154,6 +159,10 @@ img {
 
 .weather-headline {
     margin-bottom: 1.5rem;
+}
+
+.modal-body {
+    text-align: left;
 }
 
 @media only screen and (max-width: 600px) {
