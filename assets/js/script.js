@@ -110,7 +110,8 @@ function renderJoke(jokeContent) {
 
 // Fetch movie data (https://api.themoviedb.org)
 function showMovie() {
-    fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=3c3923c788ee6ca56d320ff902df6f31')
+    let randomPageNumber = getRandomNumber(1000);
+    fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=3c3923c788ee6ca56d320ff902df6f31' + '&page=' + randomPageNumber)
       .then(response => response.json())
       .then(movieData => {
         const randomNumber =  getRandomNumber(movieData.results.length);
