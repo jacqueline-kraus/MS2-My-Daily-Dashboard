@@ -1,4 +1,3 @@
-
 # My Daily Dashboard
 
 Code Institute - Interactive Frontend Development Milestone Project.
@@ -101,7 +100,9 @@ To visually appear comic-like I used mainly 2 colors:
 
 
 ## Features left to implement:
+- Joke/ Meal/ Movie: It is not possible yet to go back if hitting refresh by mistake. Especially for "Meal" this feature would be important for the future, as the ingredients list & preparation of recipe can be easily lost. First I would need to make sure each recipe has a valid URL (source), then I would integrate this URL or add a option to bookmark the URL.
 
+- Weather report: At the moment with refreshing the page, the weather location is what the geolocation DB detects as your location. Ideally the website would remember the las used location and also show it after the next refresh. The way to implement this would be by using cookies or other possibilities to store data in the browser.
 
 
 # Technlogies used:
@@ -117,6 +118,13 @@ To visually appear comic-like I used mainly 2 colors:
 - [Github](https://github.com/): for hosting the projects repository and creating a live page with [Github pages](https://pages.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/): as a IDE (Integrated Development Environment) for developing the project
 - [Git](https://en.wikipedia.org/wiki/Git): for version control
+
+### APIs:
+- [JokeAPI](https://sv443.net/jokeapi/v2/): Free API to get jokes. Usable without API token. Rate Limiting: 120 calls per minute.
+- [Geolocation DB](https://geolocation-db.com/): Free API to get geolocation of user. Usable without API key. No Rate limiting.
+- [Openweathermap](https://openweathermap.org/current): Free API to get the current weather report. Need account to get API key. Rate Limiting: 60 calls per minute and 1,000,000 calls per month.
+- [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction): Free API to get trending movies. Need account to get API key. Rate Limiting: No limit.
+- [TheMealDB](https://www.themealdb.com/api.php): Free API to get random meal recipes. Usable with provided test API key. Rate Limiting: No limit of calls, but a limit of 100 items with the test API key.
 
 ### Technology used that is required by bootstrap for some functionality to work:
 
@@ -171,7 +179,10 @@ The website was tested on following hardware devices:
 
 
 ## Bugs and problems 
-- 
+- JokeAPI: while developing the website, the JokeAPI had several times very low Uptime. So when refreshing, there wasn't shown any joke at all anymore. There is nothing I could do about it than wait for the API to work again. That lead me to implement default texts (e.g. "Sorry xxx could not be loaded")for all elements which are automatically filled with API data.
+
+- Geolocation DB: Does not always show the exact geolocation. I included an alert that is shown if the location could not be detected at all when entering the page. If there is a location shown, but it is not the correct one, the user has the option to change manually to the right location.
+
 
 # Deployment
 ## [Github pages](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
