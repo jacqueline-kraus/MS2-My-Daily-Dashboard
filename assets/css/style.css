@@ -104,12 +104,6 @@ img {
     margin-top: 8rem;
 }
 
-#joke {
-    text-align: justify;
-    padding-right: 300px;
-    padding-left: 300px;
-}
-
 /* Weather block */
 
 .weather-headline {
@@ -192,11 +186,6 @@ img {
 @media only screen and (max-width: 600px) {
 .meal-headline {
     font-size: 20px;
-}
-
-#joke {
-    text-align: justify;
-    padding: 0;
 }
 
 .fa-2x {
