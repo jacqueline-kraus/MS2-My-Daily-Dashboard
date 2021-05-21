@@ -108,6 +108,7 @@ To visually appear comic-like I used mainly 2 colors:
 - [HTML](https://en.wikipedia.org/wiki/Hypertext_Markup_Language): for structuring the website
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets): to style the HTML code
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript): for interactivity on the website
+- [JQuery](https://jquery.com/): as a JavaScript library
 - [Bootstrap v4.6](https://getbootstrap.com/): for responsiveness, additional style and modals
 - [Fontawesome](https://fontawesome.com/): as an icon library
 - [Google Fonts](https://fonts.google.com/): as a font resource
