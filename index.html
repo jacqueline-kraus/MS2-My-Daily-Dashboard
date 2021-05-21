@@ -117,14 +117,14 @@
                                         </div>
                                         <div class="modal-body">
                                             <div>
-                                                <form>
+                                                <form onsubmit="onCityFormSubmit(event)">
                                                     <div class="alert alert-danger d-none" id="city-alert" role="alert">The city you entered was not found</div>
                                                     <div id="type-location" class="form-group">
                                                         <label for="new-location" class="col-form-label font-lato">Please type your new location:</label>
                                                         <br>
                                                         <input type="text" class="form-control" id="new-location">
                                                         <br>
-                                                        <button id="submit-change-location" class="btn btn-info" type="button" data-dismiss="modal">Save changes</button>
+                                                        <button class="btn btn-info" type="submit">Save changes</button>
                                                     </div>
                                                 </form>
                                             </div>
