@@ -168,12 +168,14 @@ function showWeather(city) {
 function changeCity() {
     let inputValue = document.getElementById('new-location').value;
     showWeather(inputValue);
-
 }
 
-let changeLocationButton = document.getElementById('submit-change-location');
-changeLocationButton.addEventListener('click', changeCity);
-
+// submit change location form
+function onCityFormSubmit(event) {
+    event.preventDefault();
+    changeCity();
+    $('#weatherModal').modal('hide')
+}
 
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
