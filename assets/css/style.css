@@ -134,6 +134,11 @@ img {
     font-size: 20px;
 }
 
+#meal-image {
+    max-width: 50%;
+    height: auto;
+}
+
 /* Bootstrap button customisation */
 
 .btn-info {
@@ -186,6 +191,12 @@ img {
 @media only screen and (max-width: 600px) {
 .meal-headline {
     font-size: 20px;
+}
+
+
+#meal-image {
+    max-width: 100%;
+    height: auto;
 }
 
 .fa-2x {
