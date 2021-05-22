@@ -86,34 +86,44 @@ To visually appear comic-like I used mainly 2 colors:
 ## Existing Features
 ### FAQ:
 ![FAQ](readme-files/readme-images/FAQ_modal.png)
+- By clicking on the ? - icon on top corner right, a modal with frequenttly asked questions opens.
 
 ### Joke of the day:
 ![Joke of the day](readme-files/readme-images/Joke_of_the_day.png)
+- Shows daily a new joke. By hitting the refresh button, the user can get another joke.
 
 ### Weather today:
 ![Weather today](readme-files/readme-images/Weather_today.png)
+- Shows the weather, with the location detected automatically by [Geolocation DB](###APIs).
 
 ### Change Location for weather:
 ![Change location modal](readme-files/readme-images/Change_location_modal.png)
+- In case the wrong location is detected, there is no location detected at all or the user wants to change location manually, it is possible by clicking on the "Change location" button. This opens a modal with an input field for new location. By typing a new location and click (or press enter on the keyboard) on the button "Save changes", the weather for the new location will be shown.
 ![Change location typo](readme-files/readme-images/Change_location_typo.png)
 ![Change location errormessage](readme-files/readme-images/Change_location_errormessage.png)
+-  In case of a typo, the user sees an error message and can type again the new location. 
 
 ### Movie today:
 ![Movie today](readme-files/readme-images/Movie_today.png)
+- The "Movie today" shows the movie title and the movie poster on the website.
 ![Movie modal](readme-files/readme-images/Movie_modal.png)
+- By clicking on the button "See information" the user can read a short description of the movie and when the movie was first released.
 
 ### Meal of the day:
 ![Meal of the day](readme-files/readme-images/Meal_of_the_day.png)
+- The "Meal of the day" shows the name and an image of the meal.
 ![Meal modal](readme-files/readme-images/Meal_Modal.png)
+- By clicking on the button "Check details" the user can view the recipe (list of ingredients and preparation steps.)
 
-### Refresh item:
+### Refresh button:
 ![Refresh button](readme-files/readme-images/Refresh_button.png)
+- On the items "Joke", "Movie" and "Meal" the user can find a refresh button. By clicking this button, the item refreshes (a new item will be shown).
 
 
 ## Features left to implement:
 - Joke/ Meal/ Movie: It is not possible yet to go back if hitting refresh by mistake. Especially for "Meal" this feature would be important for the future, as the ingredients list & preparation of recipe can be easily lost. First I would need to make sure each recipe has a valid URL (source), then I would integrate this URL or add a option to bookmark the URL.
 
-- Weather report: At the moment with refreshing the page, the weather location is what the geolocation DB detects as your location. Ideally the website would remember the las used location and also show it after the next refresh. The way to implement this would be by using cookies or other possibilities to store data in the browser.
+- Weather report: At the moment with refreshing the page, the weather location is what the [Geolocation DB](###APIs) detects as your location. Ideally the website would remember the las used location and also show it after the next refresh. The way to implement this would be by using cookies or other possibilities to store data in the browser.
 
 
 # Technlogies used:
@@ -230,3 +240,7 @@ The website was tested on following hardware devices:
 - [Bootstrap](https://getbootstrap.com/): for grid, form and styling of the website
 - [Google Fonts](https://fonts.google.com/): for the fonts used
 - [Fontawesome](https://fontawesome.com/): for the icons
+
+- [Stackoverflow](https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript):to convert UTC timestamp data into local time
+- [Getbutterfly.com](https://getbutterfly.com/generate-html-list-from-javascript-array/): generating a html list from a JavaScript array.
+- [Stackoverflow](https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements): To get code that works as a line break in html
