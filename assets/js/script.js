@@ -137,7 +137,7 @@ function renderMeal(mealObject) {
 	// set preparation text
 	let mealPreparation = document.getElementById('meal-preparation');
 
-	// used: https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements --> break for new lines
+	// used: https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements: break for new lines
 	mealPreparation.innerHTML = mealObject.strInstructions.replace(/(?:\r\n|\r|\n)/g, '<br>');
 
 	// set meal image
@@ -169,6 +169,7 @@ function renderJoke(jokeContent) {
 
 // Fetch movie data (https://api.themoviedb.org)
 function showMovie() {
+    // get random page number (a total pages of 1000 with 20 items each) and return random movie
 	let randomPageNumber = getRandomNumber(1000);
 	fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=3c3923c788ee6ca56d320ff902df6f31' + '&page=' + randomPageNumber)
 		.then(response => response.json())
@@ -230,11 +231,11 @@ function changeCity() {
 	showWeather(inputValue);
 }
 
-// submit change location form
+// submit change location form (function used in form in index.html)
 function onCityFormSubmit(event) {
 	event.preventDefault();
 	changeCity();
-	$('#weatherModal').modal('hide')
+	$('#weatherModal').modal('hide');
 }
 
 // Render weather to show in index.html
@@ -257,7 +258,7 @@ function renderWeather(weatherReport) {
 	let weatherMainMinTempElement = document.getElementById('weather-main-min-temp');
 	let weatherMainFeelTempElement = document.getElementById('weather-main-feel');
 
-	// to convert sunrise/sunset data in local time: https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript
+	// convert sunrise/sunset (UTC Timestamp) data in local time
 	var secSunrise = weatherReport.sys.sunrise;
 	var dateSunrise = new Date(secSunrise * 1000);
 	var timestrSunrise = dateSunrise.toLocaleTimeString();
