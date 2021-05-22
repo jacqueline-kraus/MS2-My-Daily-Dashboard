@@ -1,10 +1,6 @@
-# My Daily Dashboard
-
-Code Institute - Interactive Frontend Development Milestone Project.
+# [My Daily Dashboard](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/){target="_blank"}
 
 This project is a single webpage, which provides a dashboard with recommendations and information on a daily basis.
-
-## [Live website in github pages](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/)
 --- 
 # Table of contents
 - [UX](#ux)
@@ -132,6 +128,7 @@ To visually appear comic-like I used mainly 2 colors:
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript): for interactivity on the website
 - [JQuery](https://jquery.com/): as a JavaScript library
 - [Bootstrap v4.6](https://getbootstrap.com/): for responsiveness, additional style and modals
+- [Popper.js](https://getbootstrap.com/docs/4.6/getting-started/introduction/): required by bootstrap for some functionality to work
 - [Fontawesome](https://fontawesome.com/): as an icon library
 - [Google Fonts](https://fonts.google.com/): as a font resource
 - [Balsamiq](https://balsamiq.com/): for creating wireframes
@@ -146,12 +143,6 @@ To visually appear comic-like I used mainly 2 colors:
 - [Openweathermap](https://openweathermap.org/current): Free API to get the current weather report. Need account to get API key. Rate Limiting: 60 calls per minute and 1,000,000 calls per month.
 - [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction): Free API to get trending movies. Need account to get API key. Rate Limiting: No limit.
 - [TheMealDB](https://www.themealdb.com/api.php): Free API to get random meal recipes. Usable with provided test API key. Rate Limiting: No limit of calls, but a limit of 100 items with the test API key.
-
-### Technology used that is required by bootstrap for some functionality to work:
-
-- [jQuery](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- [Popper.js](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- [Javascript](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
 # Code Validation
 - [JShint](https://jshint.com/) to validate JavaScipt code
@@ -200,9 +191,13 @@ The website was tested on following hardware devices:
 
 
 ## Bugs and problems 
-- JokeAPI: while developing the website, the JokeAPI had several times very low Uptime. So when refreshing, there wasn't shown any joke at all anymore. There is nothing I could do about it than wait for the API to work again. That lead me to implement default texts (e.g. "Sorry xxx could not be loaded")for all elements which are automatically filled with API data.
+- [JokeAPI](https://sv443.net/jokeapi/v2/): while developing the website, the JokeAPI had several times very low Uptime. So when refreshing, there wasn't shown any joke at all anymore. There is nothing I could do about it than wait for the API to work again. That lead me to implement default texts (e.g. "Sorry xxx could not be loaded")for all elements which are automatically filled with API data.
 
-- Geolocation DB: Does not always show the exact geolocation. I included an alert that is shown if the location could not be detected at all when entering the page. If there is a location shown, but it is not the correct one, the user has the option to change manually to the right location.
+- [Geolocation DB](https://geolocation-db.com/): Does not always show the exact geolocation. I included an alert that is shown if the location could not be detected at all when entering the page. If there is a location shown, but it is not the correct one, the user has the option to change manually to the right location.
+
+- [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction): While testing, there were some movies shown, which would fall in the category "adult movies". However the JSON object "adult" showed in all cases "false". I could not find any other way to use as a filter for not showing adult movies, so it is still possible that they are shown as well.
+
+- Movie block: The title of the movie often took many lines (especially a problem on mobile). This led to breaking the design (image was pushed down into another element). If changing the height of the whole container, this would led to misalignment between the "weather" block and the "movie" block. As a solution I trimmed the title via JavaScript code, so that only 30 characters (minus 3 for "...") could be shown. Like this there is no problem in design, the whole title can be seen when hovering on it or when opening the modal.
 
 
 # Deployment
@@ -226,9 +221,7 @@ The website was tested on following hardware devices:
 # Credits
 
 ## Content
-    
 
-## Media
 
 ## Problem solving helpers
 - [w3schools.com](https://www.w3schools.com/)
@@ -240,7 +233,9 @@ The website was tested on following hardware devices:
 - [Bootstrap](https://getbootstrap.com/): for grid, form and styling of the website
 - [Google Fonts](https://fonts.google.com/): for the fonts used
 - [Fontawesome](https://fontawesome.com/): for the icons
-
 - [Stackoverflow](https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript):to convert UTC timestamp data into local time
 - [Getbutterfly.com](https://getbutterfly.com/generate-html-list-from-javascript-array/): generating a html list from a JavaScript array.
 - [Stackoverflow](https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements): To get code that works as a line break in html
+- [Stackoverflow](https://stackoverflow.com/questions/7463658/how-to-trim-a-string-to-n-chars-in-javascript): to trim movie title for mobile optimization
+
+## Acknowledgments
