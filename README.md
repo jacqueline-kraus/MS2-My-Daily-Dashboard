@@ -42,7 +42,7 @@ This project is a single webpage, which provides a dashboard with recommendation
 - User can read a descrption of ingredients and preparation manual for recommended meal
 - User can refresh to get another meal recommendation
 - User has everything within one dashboard
-- User has the option to read a FAQ, in doubt of how to use the dashboard
+- User has the option to read a FAQ, if in doubt of how to use the dashboard
 
 ## User stories
 ### As a business owner:
@@ -76,7 +76,7 @@ To visually appear comic-like I used mainly 2 colors:
 - color of font is everywhere black.
 
 ### Images
-- I did not use any images except the ones provided by the different [APIs](###APIs)
+- I did not use any images except the ones provided by the different [APIs](#APIs)
 - Icons used are provided by [https://fontawesome.com/](https://fontawesome.com/)
 
 # Features
@@ -92,7 +92,7 @@ To visually appear comic-like I used mainly 2 colors:
 
 ### Weather today:
 ![Weather today](readme-files/readme-images/Weather_today.png)
-- Shows the weather, with the location detected automatically by [Geolocation DB](###APIs).
+- Shows the weather, with the location detected automatically by [Geolocation DB](#APIs).
 
 ### Change Location for weather:
 ![Change location modal](readme-files/readme-images/Change_location_modal.png)
@@ -121,7 +121,7 @@ To visually appear comic-like I used mainly 2 colors:
 ## Features left to implement:
 - Joke/ Meal/ Movie: It is not possible yet to go back if hitting refresh by mistake. Especially for "Meal" this feature would be important for the future, as the ingredients list & preparation of recipe can be easily lost. First I would need to make sure each recipe has a valid URL (source), then I would integrate this URL or add a option to bookmark the URL.
 
-- Weather report: At the moment with refreshing the page, the weather location is what the [Geolocation DB](###APIs) detects as your location. Ideally the website would remember the las used location and also show it after the next refresh. The way to implement this would be by using cookies or other possibilities to store data in the browser.
+- Weather report: At the moment with refreshing the page, the weather location is what the [Geolocation DB](#APIs) detects as your location. Ideally the website would remember the las used location and also show it after the next refresh. The way to implement this would be by using cookies or other possibilities to store data in the browser.
 
 
 # Technlogies used:
@@ -223,6 +223,12 @@ The website was tested on following hardware devices:
 # Credits
 
 ## Content
+- [JokeAPI](https://sv443.net/jokeapi/v2/): For the jokes
+- [Geolocation DB](https://geolocation-db.com/): For the geolocation detection
+- [Openweathermap](https://openweathermap.org/current): For the current weather report
+- [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction): For the movie recommendations
+- [TheMealDB](https://www.themealdb.com/api.php): For the meal recommendations
+
 
 
 ## Problem solving helpers
