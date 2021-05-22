@@ -107,6 +107,7 @@ To visually appear comic-like I used mainly 2 colors:
 ![Meal modal](readme-files/readme-images/Meal_Modal.png)
 
 ### Refresh item:
+![Refresh button](readme-files/readme-images/Refresh_button.png)
 
 
 ## Features left to implement:
