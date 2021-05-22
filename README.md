@@ -78,23 +78,33 @@ To visually appear comic-like I used mainly 2 colors:
 - color of font is everywhere black.
 
 ### Images
-- I did not use any images except the ones provided by the different [APIs](#technologies-used)
+- I did not use any images except the ones provided by the different [APIs](###APIs)
 - Icons used are provided by [https://fontawesome.com/](https://fontawesome.com/)
 
 # Features
 
 ## Existing Features
 ### FAQ:
+![FAQ](readme-files/readme-images/FAQ_modal.png)
 
 ### Joke of the day:
+![Joke of the day](readme-files/readme-images/Joke_of_the_day.png)
 
 ### Weather today:
+![Weather today](readme-files/readme-images/Weather_today.png)
 
 ### Change Location for weather:
+![Change location modal](readme-files/readme-images/Change_location_modal.png)
+![Change location typo](readme-files/readme-images/Change_location_typo.png)
+![Change location errormessage](readme-files/readme-images/Change_location_errormessage.png)
 
 ### Movie today:
+![Movie today](readme-files/readme-images/Movie_today.png)
+![Movie modal](readme-files/readme-images/Movie_modal.png)
 
 ### Meal of the day:
+![Meal of the day](readme-files/readme-images/Meal_of_the_day.png)
+![Meal modal](readme-files/readme-images/Meal_Modal.png)
 
 ### Refresh item:
 
