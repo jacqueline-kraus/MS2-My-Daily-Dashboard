@@ -1,6 +1,8 @@
-# [My Daily Dashboard](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/){:target="_blank"}
+# [My Daily Dashboard](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/)
 
 This project is a single webpage, which provides a dashboard with recommendations and information on a daily basis.
+
+![Website Responsiveness](readme-files/readme-images/Screenshot_amiresponsive_my_daily_dashboard.png)
 --- 
 # Table of contents
 - [UX](#ux)
