@@ -1,4 +1,4 @@
-# [My Daily Dashboard](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/){target="_blank"}
+# [My Daily Dashboard](https://jacqueline-kraus.github.io/MS2-My-Daily-Dashboard/){:target="_blank"}
 
 This project is a single webpage, which provides a dashboard with recommendations and information on a daily basis.
 --- 
