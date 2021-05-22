@@ -195,7 +195,18 @@ function renderMovie(movieTrending) {
 	let movieDescriptionModal = document.getElementById('movie-description-modal');
 	let movieReleaseDateModal = document.getElementById('movie-release-date-modal');
 
-	movieTitleElement.innerHTML = movieTrending.title;
+    //Code from: https://stackoverflow.com/questions/7463658/how-to-trim-a-string-to-n-chars-in-javascript and https://jsfiddle.net/t354gw7e/
+    // Trimming movie title string to show on website (for mobile optimization)
+    let titleLength = 30;
+    movieTitleElement.innerHTML = movieTrending.title;
+    let movieTitleString = movieTitleElement.innerHTML;
+    let trimmedString = movieTitleString.length > titleLength ?
+	movieTitleString.substring(0, titleLength - 3) + '...' :
+	movieTitleString;
+
+    movieTitleElement.innerHTML = trimmedString;
+
+	movieTitleElement.title = movieTrending.title;
 	movieTitleModal.innerHTML = movieTrending.title;
 	movieImageElement.src = 'https://image.tmdb.org/t/p/w185' + movieTrending.poster_path;
 	movieDescriptionModal.innerHTML = `<b>Short description:</b><br> ${movieTrending.overview}`;
@@ -217,6 +228,7 @@ function getCity() {
 			}
 		});
 }
+
 
 // Fetch weather data from Openweathermap API (https://api.openweathermap.org)
 function showWeather(city) {
