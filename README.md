@@ -134,6 +134,7 @@ To visually appear comic-like I used mainly 2 colors:
 - [Fontawesome](https://fontawesome.com/): as an icon library
 - [Google Fonts](https://fonts.google.com/): as a font resource
 - [Balsamiq](https://balsamiq.com/): for creating wireframes
+- [ami.responsivedesign](http://ami.responsivedesign.is/): for checking responsiveness on different screen sizes and using the screenshot taken from there.
 
 - [Github](https://github.com/): for hosting the projects repository and creating a live page with [Github pages](https://pages.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/): as a IDE (Integrated Development Environment) for developing the project
@@ -241,9 +242,11 @@ The website was tested on following hardware devices:
 - [Bootstrap](https://getbootstrap.com/): for grid, form and styling of the website
 - [Google Fonts](https://fonts.google.com/): for the fonts used
 - [Fontawesome](https://fontawesome.com/): for the icons
-- [Stackoverflow](https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript):to convert UTC timestamp data into local time
+- [Stackoverflow](https://stackoverflow.com/questions/28952550/how-to-convert-utc-timestamp-only-into-local-time-on-the-web-with-javascript): to convert UTC timestamp data into local time
 - [Getbutterfly.com](https://getbutterfly.com/generate-html-list-from-javascript-array/): generating a html list from a JavaScript array.
 - [Stackoverflow](https://stackoverflow.com/questions/784539/how-do-i-replace-all-line-breaks-in-a-string-with-br-elements): To get code that works as a line break in html
 - [Stackoverflow](https://stackoverflow.com/questions/7463658/how-to-trim-a-string-to-n-chars-in-javascript): to trim movie title for mobile optimization
 
 ## Acknowledgments
+- A big thank you to my mentor [Adeye Adegbenga](https://github.com/deye9) for helping me finding bugs and giving me directions on how to solve them.
+- Another thank you goes out to the Code Institute Slack Community for giving me valuable feedback on my project!
