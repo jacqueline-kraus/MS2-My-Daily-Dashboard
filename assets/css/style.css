@@ -48,12 +48,6 @@ img {
 
 .page-headline {
     padding-left: 1rem;
-    padding-bottom: 1rem;
-}
-
-.faq-box {
-    padding-top: 0.5rem;
-    padding-bottom: 0;
 }
 
 .far {
@@ -101,7 +95,7 @@ img {
 /* Joke block */
 
 .joke-container {
-    margin-top: 8rem;
+    margin-top: 2rem;
 }
 
 /* Weather block */
