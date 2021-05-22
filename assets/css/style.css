@@ -176,6 +176,10 @@ img {
     box-shadow: none;
 }
 
+.btn-secondary {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
 /* Refresh Button */
 
 .refresh-button {
@@ -210,5 +214,4 @@ img {
     right: 0;
     padding-right: 3rem;
 }
-
 }
