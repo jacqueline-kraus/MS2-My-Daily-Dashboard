@@ -38,20 +38,19 @@
     </div>
     <!-- HEADER -->
     <header>
-        <div class="container-fluid header-style">
-            <div class="row text-right">
-                <!-- FAQ -->
-                <div class="col">
-                    <!-- Button to trigger FAQ modal -->
-                    <button type="button" class="btn" data-toggle="modal" data-target="#faqModal">
-                        <i class="far fa-question-circle fa-2x"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="container-fluid header-style fixed-top">
             <div class="row">
+                <div class="col-2"></div>
                 <!-- Page Headline -->
-                <div class="col text-center page-headline">
-                    <h1 class="text-uppercase">My Daily Dashboard</h1>
+                <div class="col-8">
+                    <h1 class="text-uppercase page-headline">My Daily Dashboard</h1>
+                </div>
+                <!-- FAQ -->
+                <div class="col-2 faq-button">
+                    <!-- Button to trigger FAQ modal -->
+                    <a href="#" type="button" class="btn" data-toggle="modal" data-target="#faqModal">
+                        <i class="far fa-question-circle fa-2x"></i>
+                    </a>
                 </div>
             </div>
         </div>
