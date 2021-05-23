@@ -206,7 +206,7 @@ function renderMovie(movieTrending) {
         movieTitleString.substring(0, titleLength - 3) + '...' :
         movieTitleString;
 
-    movieTitleElement.innerHTML = trimmedString;
+	movieTitleElement.innerHTML = trimmedString;
 
 	movieTitleElement.title = movieTrending.title;
 	movieTitleModal.innerHTML = movieTrending.title;
@@ -255,6 +255,8 @@ function onCityFormSubmit(event) {
 // Render weather to show in index.html
 function renderWeather(weatherReport) {
 	document.getElementById('new-location').value = '';
+	
+	// if the http code of the response is above or equal 400 then there was a problem fetching the city
 	if (parseInt(weatherReport.cod) >= 400) {
 		document.getElementById('city-alert').classList.remove('d-none');
 		setTimeout(function () {
