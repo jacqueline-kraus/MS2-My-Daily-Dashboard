@@ -39,7 +39,7 @@ This project is a single webpage, which provides a dashboard with recommendation
 - User receives daily recommendation on what movie to watch
 - User can read a short description of the movie or refresh to get another movie recommendation
 - User receives daily recommendation on which meal to prepare
-- User can read a descrption of ingredients and preparation manual for recommended meal
+- User can read a description of ingredients and preparation manual for recommended meal
 - User can refresh to get another meal recommendation
 - User has everything within one dashboard
 - User has the option to read a FAQ, if in doubt of how to use the dashboard
@@ -59,7 +59,7 @@ This project is a single webpage, which provides a dashboard with recommendation
 - I want all of this in one place without needing to open 4 different apps
 
 ## Structure of the website
-The website is optmized for all devices and screensizes (desktop, mobile and tablet). It is easy to understand and therefore user friendly designed. It has a clear structure of different elements, that one may need in their daily life. In the header of the page is a FAQ button, for explaining the website. For getting more information each element block has a button which opens a modal. The element blocks that are refreshable have also a button to refresh and get a new item.
+The website is optimized for all devices and screen sizes (desktop, mobile and tablet). It is easy to understand and therefore user friendly designed. It has a clear structure of different elements, that one may need in their daily life. In the header of the page is a FAQ button, for explaining the website. For getting more information each element block has a button which opens a modal. The element blocks that are refreshable have also a button to refresh and get a new item.
 
 ## Wireframes
 Wireframes can be found here: [WIREFRAMES](https://github.com/jacqueline-kraus/MS2-My-Daily-Dashboard/blob/main/readme-files/My_daily_dashboard.pdf)
@@ -93,7 +93,7 @@ To visually appear comic-like I used mainly 2 colors:
 
 ### Change Location for weather:
 ![Change location modal](readme-files/readme-images/Change_location_modal.png)
-- In case the wrong location is detected, there is no location detected at all or the user wants to change location manually, it is possible by clicking on the "Change location" button. This opens a modal with an input field for new location. By typing a new location and click (or press enter on the keyboard) on the button "Save changes", the weather for the new location will be shown.
+- In case the wrong location is detected, there is no location detected at all, or the user wants to change location manually, it is possible by clicking on the "Change location" button. This opens a modal with an input field for new location. By typing a new location and click (or press enter on the keyboard) on the button "Save changes", the weather for the new location will be shown.
 ![Change location typo](readme-files/readme-images/Change_location_typo.png)
 ![Change location errormessage](readme-files/readme-images/Change_location_errormessage.png)
 -  In case of a typo, the user sees an error message and can type again the new location. 
@@ -116,7 +116,7 @@ To visually appear comic-like I used mainly 2 colors:
 
 ### FAQ:
 ![FAQ](readme-files/readme-images/FAQ_modal.png)
-- By clicking on the ? - icon on top corner right, a modal with frequenttly asked questions opens.
+- By clicking on the "?" - icon on top corner right, a modal with frequently asked questions opens.
 
 
 ## Features left to implement:
@@ -152,7 +152,7 @@ To visually appear comic-like I used mainly 2 colors:
 - [TheMealDB](https://www.themealdb.com/api.php): Free API to get random meal recipes. Usable with provided test API key. Rate Limiting: No limit of calls, but a limit of 100 items with the test API key.
 
 # Code Validation
-- [JShint](https://jshint.com/) to validate JavaScipt code
+- [JShint](https://jshint.com/) to validate JavaScript code
 - [W3 CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code
 - [W3 HTML Validator](https://validator.w3.org/) to validate HTML code
 
@@ -218,7 +218,7 @@ Accessibility score (needs improvment):
 - I want to have a recommendation on which movie I could watch
     > The user finds at least one recommendation for a movie to watch per day.
 - I want to have a recommendation on what I could cook and eat
-    > The user finds at least one meal recommendation per day including an indgredients list and preparation steps.
+    > The user finds at least one meal recommendation per day including an ingredients list and preparation steps.
 - If I don't like any of the recommendations given, I want to have a new recommendation
     > The user can do that by clicking on the refresh button, which is next to the headline of each item (except the weather report).
 - I want all of this in one place without needing to open 4 different apps
@@ -230,9 +230,9 @@ Accessibility score (needs improvment):
 
 - [Geolocation DB](https://geolocation-db.com/): Does not always show the exact geolocation. I included an alert that is shown if the location could not be detected at all when entering the page. If there is a location shown, but it is not the correct one, the user has the option to change manually to the right location.
 
-- [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction): While testing, there were some movies shown, which would fall in the category "adult movies". However the JSON object "adult" showed in all cases "false". I could not find any other way to use as a filter for not showing adult movies, so it is still possible that they are shown as well.
+- [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction): While testing, there were some movies shown, which would fall in the category "adult movies". However, the JSON object "adult" showed in all cases "false". I could not find any other way to use as a filter for not showing adult movies, so it is still possible that they are shown as well.
 
-- Movie block: The title of the movie often took many lines (especially a problem on mobile). This led to breaking the design (image was pushed down into another element). If changing the height of the whole container, this would led to misalignment between the "weather" block and the "movie" block. As a solution I trimmed the title via JavaScript code, so that only 30 characters (minus 3 for "...") could be shown. Like this there is no problem in design, the whole title can be seen when hovering on it or when opening the modal.
+- Movie block: The title of the movie often took many lines (especially a problem on mobile). This led to breaking the design (image was pushed down into another element). If changing the height of the whole container, this would lead to misalignment between the "weather" block and the "movie" block. As a solution I trimmed the title via JavaScript code, so that only 30 characters (minus 3 for "...") could be shown. Like this there is no problem in design, the whole title can be seen when hovering on it or when opening the modal.
 
 - Style on MacOs Catalina Safari Version 13.1.1 (15609.2.9.1.2): The FAQ button style is not shown correctly.
 ![Safari style bug](readme-files/readme-images/safari_style_bug.png)
@@ -243,9 +243,9 @@ Accessibility score (needs improvment):
 ## [Github pages](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 1. Go to repository 
 2. Click on "Settings"
-3. Scroll until section "GitHub Pages"
-4. Select on the "source" dropdown menu the "master branch" option
-5. A success message (in green) appears and it shows you the link for your live preview page in Github Pages.
+3. Scroll on the lefthand menu until the section "Pages". This will open the section "Github Pages"
+4. Select on the "source" dropdown menu the "main branch" option
+5. A success message (in green) appears and shows you the link for your live preview page in Github Pages.
 
 ## [Local deployment](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 1. Go to repository
@@ -285,4 +285,5 @@ Accessibility score (needs improvment):
 
 ## Acknowledgments
 - A big thank you to my mentor [Adeye Adegbenga](https://github.com/deye9) for helping me finding bugs and giving me directions on how to solve them.
+- Also thank you so much [Ricardo Fiorani](https://github.com/ricardofiorani) for reviewing the code and finding typos!
 - Another thank you goes out to the Code Institute Slack Community for giving me valuable feedback on my project!
