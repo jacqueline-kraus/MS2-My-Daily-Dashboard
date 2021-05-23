@@ -125,7 +125,7 @@ To visually appear comic-like I used mainly 2 colors:
 - Weather report: At the moment with refreshing the page, the weather location is what the [Geolocation DB](#APIs) detects as your location. Ideally the website would remember the las used location and also show it after the next refresh. The way to implement this would be by using cookies or other possibilities to store data in the browser.
 
 
-# Technlogies used:
+# Technologies used:
 - [HTML](https://en.wikipedia.org/wiki/Hypertext_Markup_Language): for structuring the website
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets): to style the HTML code
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript): for interactivity on the website
@@ -136,8 +136,9 @@ To visually appear comic-like I used mainly 2 colors:
 - [Google Fonts](https://fonts.google.com/): as a font resource
 - [Balsamiq](https://balsamiq.com/): for creating wireframes
 - [Am I responsive?](http://ami.responsivedesign.is/): for checking responsiveness on different screen sizes and using the screenshot taken from there as a mockup for my projects readme.
-- [https://caniuse.com/](https://caniuse.com/): to check browser support of fetch method
+- [Can I use?](https://caniuse.com/): to check browser support of fetch method
 - [Comparium](https://front.comparium.app/livetesting): For live testing on different browsers
+- [Realfavicongenerator](https://realfavicongenerator.net/): for generating the favicon
 
 - [Github](https://github.com/): for hosting the projects repository and creating a live page with [Github pages](https://pages.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/): as a IDE (Integrated Development Environment) for developing the project
