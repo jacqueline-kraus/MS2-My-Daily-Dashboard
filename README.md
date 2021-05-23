@@ -82,9 +82,6 @@ To visually appear comic-like I used mainly 2 colors:
 # Features
 
 ## Existing Features
-### FAQ:
-![FAQ](readme-files/readme-images/FAQ_modal.png)
-- By clicking on the ? - icon on top corner right, a modal with frequenttly asked questions opens.
 
 ### Joke of the day:
 ![Joke of the day](readme-files/readme-images/Joke_of_the_day.png)
@@ -117,6 +114,10 @@ To visually appear comic-like I used mainly 2 colors:
 ![Refresh button](readme-files/readme-images/Refresh_button.png)
 - On the items "Joke", "Movie" and "Meal" the user can find a refresh button. By clicking this button, the item refreshes (a new item will be shown).
 
+### FAQ:
+![FAQ](readme-files/readme-images/FAQ_modal.png)
+- By clicking on the ? - icon on top corner right, a modal with frequenttly asked questions opens.
+
 
 ## Features left to implement:
 - Joke/ Meal/ Movie: It is not possible yet to go back if hitting refresh by mistake. Especially for "Meal" this feature would be important for the future, as the ingredients list & preparation of recipe can be easily lost. First I would need to make sure each recipe has a valid URL (source), then I would integrate this URL or add a option to bookmark the URL.
@@ -134,7 +135,9 @@ To visually appear comic-like I used mainly 2 colors:
 - [Fontawesome](https://fontawesome.com/): as an icon library
 - [Google Fonts](https://fonts.google.com/): as a font resource
 - [Balsamiq](https://balsamiq.com/): for creating wireframes
-- [ami.responsivedesign](http://ami.responsivedesign.is/): for checking responsiveness on different screen sizes and using the screenshot taken from there.
+- [Am I responsive?](http://ami.responsivedesign.is/): for checking responsiveness on different screen sizes and using the screenshot taken from there as a mockup for my projects readme.
+- [https://caniuse.com/](https://caniuse.com/): to check browser support of fetch method
+- [Comparium](https://front.comparium.app/livetesting): For live testing on different browsers
 
 - [Github](https://github.com/): for hosting the projects repository and creating a live page with [Github pages](https://pages.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/): as a IDE (Integrated Development Environment) for developing the project
@@ -155,18 +158,34 @@ To visually appear comic-like I used mainly 2 colors:
 # Testing
 
 ## Functionality testing
-For testing responsiveness and styling I used for the project [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools).
+For testing responsiveness, styling and interactivity I used for the project [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools).
 
 ## Compatibility testing
 The website was tested through virtual devices with Chrome Developer Tools.
 
-Browser tested: Google Chrome and Safari.
+Browsers tested: Google Chrome and Safari.
+[Live testing with Comparium](https://front.comparium.app/livetesting)
+- Windows 10 Chrome 89.0
+- Windows 10 Firefox 85.0
+- Windows 10 Edge 86.0
+- Windows 10 Opera 74.0
+- Linux Firefox 81.0
+- Linux Chrome 87.0
+- Linux Opera 72.0
+
+Tested locally: 
+- MacOs Catalina Google Chrome Version 90.0.4430.212 (Official Build) (x86_64)
+- MacOs Catalina Safari Version 13.1.1 (15609.2.9.1.2)
 
 The website was tested on following hardware devices:
-- Macbook Air with MacOs Catalina
+- Macbook Air with MacOs Catalina (13-inch, 2017)
+- Macbook Pro with MacOs Catalina (Retina, 15-inch, Mid 2015)
 - Huawei P30 Pro with Android 10
-- Google Pixel 2XL with Android 11
+- Google Pixel 4a (5G) with Android 11
 - Microsoft Surface 7 Pro with Windows 10
+
+- Testing if fetch method is supported by all browsers with [https://caniuse.com/](https://caniuse.com/)
+![Can I use?](readme-files/readme-images/Caniuse_fetch_screenshot.png)
 
 ## User stories testing
 ### As a business owner:
@@ -201,6 +220,10 @@ The website was tested on following hardware devices:
 - [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction): While testing, there were some movies shown, which would fall in the category "adult movies". However the JSON object "adult" showed in all cases "false". I could not find any other way to use as a filter for not showing adult movies, so it is still possible that they are shown as well.
 
 - Movie block: The title of the movie often took many lines (especially a problem on mobile). This led to breaking the design (image was pushed down into another element). If changing the height of the whole container, this would led to misalignment between the "weather" block and the "movie" block. As a solution I trimmed the title via JavaScript code, so that only 30 characters (minus 3 for "...") could be shown. Like this there is no problem in design, the whole title can be seen when hovering on it or when opening the modal.
+
+- Style on MacOs Catalina Safari Version 13.1.1 (15609.2.9.1.2): The FAQ button style is not shown correctly.
+![Safari style bug](readme-files/readme-images/safari_style_bug.png)
+
 
 
 # Deployment
