@@ -201,8 +201,8 @@ function renderMovie(movieTrending) {
     movieTitleElement.innerHTML = movieTrending.title;
     let movieTitleString = movieTitleElement.innerHTML;
     let trimmedString = movieTitleString.length > titleLength ?
-	movieTitleString.substring(0, titleLength - 3) + '...' :
-	movieTitleString;
+        movieTitleString.substring(0, titleLength - 3) + '...' :
+        movieTitleString;
 
     movieTitleElement.innerHTML = trimmedString;
 
@@ -283,7 +283,7 @@ function renderWeather(weatherReport) {
 	let weatherSysSunsetElement = document.getElementById('weather-sys-sunset');
 
 	locationName.innerHTML = `<b>Location:</b> ${weatherReport.name}, ${weatherReport.sys.country}`;
-	weatherIconElement.src = 'http://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
+	weatherIconElement.src = 'https://openweathermap.org/img/wn/' + weatherReport.weather[0].icon + '@2x.png';
 	weatherMainTempElement.innerHTML = `<i class="fas fa-temperature-high"></i> <b>Temperature:</b> ${parseInt(weatherReport.main.temp)} °C`;
 	weatherMainMaxTempElement.innerHTML = 'Max. Temperature: ' + parseInt(weatherReport.main.temp_max) + '°C';
 	weatherMainMinTempElement.innerHTML = 'Min. Temperature: ' + parseInt(weatherReport.main.temp_min) + '°C';
