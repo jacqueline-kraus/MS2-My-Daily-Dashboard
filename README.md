@@ -164,6 +164,7 @@ For testing responsiveness, styling and interactivity I used for the project [Ch
 The website was tested through virtual devices with Chrome Developer Tools.
 
 Browsers tested: Google Chrome and Safari.
+
 [Live testing with Comparium](https://front.comparium.app/livetesting)
 - Windows 10 Chrome 89.0
 - Windows 10 Firefox 85.0
@@ -184,8 +185,19 @@ The website was tested on following hardware devices:
 - Google Pixel 4a (5G) with Android 11
 - Microsoft Surface 7 Pro with Windows 10
 
-- Testing if fetch method is supported by all browsers with [https://caniuse.com/](https://caniuse.com/)
+Testing if fetch method is supported by all browsers with [https://caniuse.com/](https://caniuse.com/)
 ![Can I use?](readme-files/readme-images/Caniuse_fetch_screenshot.png)
+
+## Performance testing with [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+Overall Scores:
+
+![Lighthouse scores](readme-files/readme-images/lighthouse_scores.png)
+
+Accessibility score (needs improvment):
+
+![lighthouse accessibility score](readme-files/readme-images/lighthouse_accessibility_score.png)
+
 
 ## User stories testing
 ### As a business owner:
