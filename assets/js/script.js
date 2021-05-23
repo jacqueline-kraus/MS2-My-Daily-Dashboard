@@ -112,6 +112,7 @@ function renderMeal(mealObject) {
 	let listElement = document.createElement('ul');
 
 	// Add it to the page
+    document.getElementById('mealIngredientsList').innerHTML = '';
 	document.getElementById('mealIngredientsList').appendChild(listElement);
 
 	for (let i = 0; i < ingredients.length; ++i) {
