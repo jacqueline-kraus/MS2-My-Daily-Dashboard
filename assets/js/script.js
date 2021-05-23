@@ -1,5 +1,6 @@
 // jshint esversion:6
 
+// function to refresh the whole website after 24 hours
 setInterval(function () {
 	showMeal();
 	showJoke();
@@ -7,7 +8,7 @@ setInterval(function () {
 	getCity();
 }, 86400000);
 
-
+// trigger data fetch when document is ready
 $(document).ready(function () {
 	showMeal();
 	showJoke();
@@ -112,7 +113,7 @@ function renderMeal(mealObject) {
 	let listElement = document.createElement('ul');
 
 	// Add it to the page
-    document.getElementById('mealIngredientsList').innerHTML = '';
+	document.getElementById('mealIngredientsList').innerHTML = '';
 	document.getElementById('mealIngredientsList').appendChild(listElement);
 
 	for (let i = 0; i < ingredients.length; ++i) {
